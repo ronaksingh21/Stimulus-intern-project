@@ -364,6 +364,67 @@
                 display: flex;
             }
         }
+        /* Testimonials */
+.testimonials {
+  background: #f8fafc;
+  padding: 6rem 2rem;
+}
+.testimonials .section-title { color: #1a365d; }
+.testimonials .section-subtitle { color: #718096; margin-bottom: 3rem; }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: #d6e2ee;                 /* soft blue like the example */
+  border-radius: 16px;
+  padding: 2.25rem 2rem 2rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.testimonial-meta {
+  font-size: 0.95rem;
+  color: #2d3748;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.quote-wrap {
+  position: relative;
+  color: #0b2a55;
+}
+
+.quote-open,
+.quote-close {
+  position: absolute;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(11, 42, 85, 0.15);
+  font-weight: 800;
+  pointer-events: none;
+}
+
+.quote-open { top: -10px; left: -5px; }
+.quote-close { bottom: -15px; right: 5px; }
+
+.testimonial-text {
+  position: relative;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #0b2a55;
+  padding: 1.75rem 0 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .testimonial-text { font-size: 1.1rem; }
+  .quote-open, .quote-close { font-size: 3.4rem; }
+}
 
         /* Mobile menu when toggled */
         .mobile-menu-open .nav-menu {
@@ -821,7 +882,7 @@
             </div>
         </div>
     </header>
-
+    
     <!-- Annotation: Hero section with clear value proposition -->
     <section class="hero annotated">
         <div class="annotation" style="top: 20px; right: 20px;">Dynamic gradient background inspired by GLG's visual energy</div>
@@ -898,6 +959,54 @@
             </div>
         </div>
     </section>
+    <section class="testimonials annotated" id="testimonials">
+  <div class="annotation" style="top: 20px; left: 20px;">Light-blue quote cards styled like the reference</div>
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-subtitle">Speed, relevancy, and trust—straight from the teams we support</p>
+
+    <div class="testimonials-grid">
+      <!-- Card 1 -->
+      <article class="testimonial-card">
+        <div class="testimonial-meta">Portfolio Manager, global equity fund</div>
+        <div class="quote-wrap">
+          <div class="quote-open">“</div>
+          <p class="testimonial-text">
+            The speed and relevancy of insights and transcripts from Stimulus are unparalleled.
+            You’re our first port of call, and we trust you throughout our research process.
+          </p>
+          <div class="quote-close">”</div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="testimonial-card">
+        <div class="testimonial-meta">Associate, global strategy consultancy</div>
+        <div class="quote-wrap">
+          <div class="quote-open">“</div>
+          <p class="testimonial-text">
+            A powerful tool to get smart before meetings. There’s enough depth to load up on helpful
+            context—without being overwhelmed.
+          </p>
+          <div class="quote-close">”</div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="testimonial-card">
+        <div class="testimonial-meta">Head of Operations, mid-market manufacturer</div>
+        <div class="quote-wrap">
+          <div class="quote-open">“</div>
+          <p class="testimonial-text">
+            Stimulus helped us streamline hiring and sharpen our go-to-market. We saw measurable
+            efficiency gains within weeks.
+          </p>
+          <div class="quote-close">”</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
     <!-- Annotation: Competitive advantages section -->
     <section class="why-choose annotated" id="why-choose">
@@ -960,7 +1069,7 @@
             </div>
         </div>
     </section>
-
+    
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Stimulus. All rights reserved. | Business Consulting • Job Recruitment • Business Advisory</p>
